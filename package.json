@@ -1,0 +1,23 @@
+{
+  "name": "js_homework",
+  "version": "1.0.0",
+  "description": "자바스크립트 과제 프로젝트 3주차",
+  "homepage": "https://github.com/min830-a/JS_homework#readme",
+  "bugs": {
+    "url": "https://github.com/min830-a/JS_homework/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/min830-a/JS_homework.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

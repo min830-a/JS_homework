@@ -173,7 +173,7 @@
       grade ='B';
       description ='우수';
     }
-    else if (score>=70) {
+    else if (score>=70) {햣 
       grade ='C';
       description ='보통';
     }
