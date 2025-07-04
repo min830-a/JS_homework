@@ -1,0 +1,63 @@
+:root{
+
+  /* 색상 */
+  --orange : #FF6000;
+  --red : #B31116;
+  --black : #1D1316;
+  --yellow : #FFD528;
+  --brown : #B84601;
+  --beige : #E9D4B4;
+  --sage-green : #DFE8E0;
+  --bg-color : #FFFFFF;
+
+  /* 도형 크기 */
+  --round-rec-height : 124px;
+  --round-rec-width : 250px; 
+ }
+
+
+.shape {
+  display: block;
+}
+
+.point-circle {
+  width: 124px;
+  height: 124px;
+  border-radius: 0 50% 50% 50%;
+}
+
+.orange.point-circle {
+  background: var(--orange);
+  position: relative;
+}
+.orange.point-circle::before {
+  content: '';
+  background: var(--bg-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+.red.line-round-rec {
+  width: var(--round-rec-width);
+  height: var(--round-rec-height);
+  border: 2px solid var(--red);
+  border-radius: calc( var(--round-rec-height) / 2);
+  background: transparent;
+  position: relative;
+}
+.red.line-round-rec::before {
+  content: '';
+  background-color: var(--red);
+  border-top-left-radius: var(--round-rec-height);
+  border-bottom-left-radius: var(--round-rec-height);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  width: calc(var(--round-rec-height) * 0.93 / 2);
+  height: calc(var(--round-rec-height) * 0.93);
+}

@@ -1,13 +1,15 @@
+@charset "UTF-8";
 @import url(../styles/modern-reset.css);
-
 body {
   background-color: #e8e8e8;
-  padding: 10px;
+  padding: 50px;
 }
+
 section {
   border-radius: 16px;
   background-color: white;
   width: 384px;
+  height: 372px;
 }
 
 /* 상단 타이틀 */
@@ -30,7 +32,7 @@ section {
   font-weight: 700;
   margin: 0 6px;
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 
 .title-icon {
@@ -48,18 +50,16 @@ section {
 }
 
 /* 게임 소개 카드 슬라이드*/
-
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.card-slide-01 {
+.card-slide {
   display: flex;
   gap: 1rem;
   justify-content: center;
-
 }
 
 .gameCard {
@@ -72,7 +72,7 @@ ul {
   gap: 0.5rem;
 }
 
-.gameCard span[class^="gameCard-bg"] {
+.gameCard span[class^=gameCard-bg] {
   height: 10rem;
   width: 10rem;
   display: inline-flex;
@@ -86,47 +86,66 @@ ul {
 
 .gameCard-bg-crono {
   background-image: url(../assets/character-01-bg.png);
- }
+}
 
- .gameCard-bg-arcAge {
+.gameCard-bg-arcAge {
   background-image: url(../assets/character-02-bg.png);
- }
+}
 
-.gameCard span[class^="gameCard-bg"] img {
+.gameCard span[class^=gameCard-bg] img {
   width: 100%;
   position: absolute;
   bottom: 0;
   border-radius: 0 0 0.5rem 0.5rem;
- }
+}
 
-
-
- .gameCard h3 {
+.gameCard h3 {
   display: flex;
   font-weight: 700;
   font-size: 1rem;
   margin: 0.9rem 0 0.125rem 0;
- }
+}
 
- .gameCard p {
+.gameCard p {
   display: flex;
   margin: 0;
 }
 
- .gameCard p:last-child {
+.gameCard p:last-child {
   color: rgba(0, 0, 0, 0.48);
   margin-top: 0.5rem;
-  }
+}
+
+/* 카드 슬라이드 페이지들  */
+.card-slide-container {
+  overflow: hidden;
+}
+
+.card-slide-contents {
+  width: 336px;
+  background-color: green;
+}
+.card-slide-contents .card-slide {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+.card-slide-contents .card-slide:nth-child(2) {
+  background-color: yellow;
+  left: 384px;
+}
+.card-slide-contents .card-slide:nth-child(3) {
+  background-color: red;
+  left: 720px;
+}
 
 /* 카드 슬라이드 네비게이션 */
-
 .navigation {
   margin-top: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.75rem; /* 12px */
-
 }
 
 .navigation button {
@@ -148,3 +167,5 @@ ul {
   letter-spacing: -0.18px;
   font-family: "Noto Sans KR";
 }
+
+/*# sourceMappingURL=styles.css.map */
