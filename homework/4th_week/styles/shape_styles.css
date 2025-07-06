@@ -81,6 +81,12 @@
 }
 
 /* 중간 모형 */
+.red.oneLine-circle {
+  border: 30px solid var(--red);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
 .black.quarter-circle,
 .beige.quarter-circle,
 .brown.quarter-circle {
@@ -125,10 +131,10 @@
 
 .line-circle::before {
   border: 1px solid var(--red);
-  width: calc((--size-1) * 0.42);
-  height: calc((--size-1) * 0.42);
+  width: calc(var(--size-1) * 0.42);
+  height: calc(var(--size-1) * 0.42);
   border-radius: 50%;
-  
+  background-color: inherit;
 }
 
 .sage-green.round-rec {
