@@ -1,33 +1,35 @@
-:root{
-
-  /* 색상 */
-  --orange : #FF6000;
-  --red : #B31116;
-  --black : #1D1316;
-  --yellow : #FFD528;
-  --brown : #B84601;
-  --beige : #E9D4B4;
-  --sage-green : #DFE8E0;
-  --bg-color : #FFFFFF;
-
-  /* 도형 크기 */
-  --round-rec-height : 124px;
-  --round-rec-width : 250px; 
- }
 
 
+ /* 색상 클래스 */
+.red {background-color: var(--red);}
+.black{background-color: var(--black);}
+.yellow{background-color: var(--yellow);}
+.orange {background-color: var(--orange);}
+.beige { background-color: var(--beige);}
+.sage-green { background-color: var(--sage-green);}
+ 
+/* 도형 */
 .shape {
   display: block;
 }
-
 .point-circle {
-  width: 124px;
-  height: 124px;
+  width: var(--size-1);
+  height: var(--size-1);
   border-radius: 0 50% 50% 50%;
 }
+.quarter-circle {
+  width: var(--size-1);
+  height: var(--size-1);
+  border-top-right-radius: 100%;
+}
+.circle {
+  width: var(--size-1);
+  height: var(--size-1);
+  border-radius: 50%;
+}
+
 
 .orange.point-circle {
-  background: var(--orange);
   position: relative;
 }
 .orange.point-circle::before {
@@ -42,22 +44,100 @@
 }
 
 .red.line-round-rec {
-  width: var(--round-rec-width);
-  height: var(--round-rec-height);
+  width: var(--size-2);
+  height: var(--size-1);
   border: 2px solid var(--red);
-  border-radius: calc( var(--round-rec-height) / 2);
+  border-radius: calc( var(--size-1) / 2);
   background: transparent;
   position: relative;
 }
 .red.line-round-rec::before {
   content: '';
   background-color: var(--red);
-  border-top-left-radius: var(--round-rec-height);
-  border-bottom-left-radius: var(--round-rec-height);
+  border-top-left-radius: var(--size-1);
+  border-bottom-left-radius: var(--size-1);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateY(-50%);
-  width: calc(var(--round-rec-height) * 0.93 / 2);
-  height: calc(var(--round-rec-height) * 0.93);
+  width: calc(var(--size-1) * 0.93 / 2);
+  height: calc(var(--size-1) * 0.93);
+}
+
+.img-point-circle {
+  width: var(--size-2);
+  height: var(--size-2);
+  border-radius: 50% 0 50% 50%;
+}
+
+.img-point-circle img {
+  border-radius: inherit;
+}
+
+.line-half-circle {
+  width: var(--size-2);
+  height: var(--size-1);
+  border-radius: var(--size-1) var(--size-1) 0 0;
+  position: relative;
+}
+
+.line-half-circle::before {
+  content: '';
+  width: 50%;
+  height: 50%;
+  background-color: var(--bg-color);
+  border-radius: calc(var(--size-1) / 2) calc(var(--size-1) / 2) 0 0 ;
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+}
+
+.red.round-rec {
+  width: var(--size-2);
+  height: var(--size-1);
+  border: 40px solid var(--red);
+  border-radius: calc( var(--size-1) / 2);
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.line-circle {
+  border: 2px solid var(--red);
+  border-radius: 50%;
+  width: var(--size-1);
+  height: var(--size-1);
+  background-color: transparent;
+}
+
+.line-circle::before {
+  border: 1px solid var(--red);
+  width: calc((--size-1) * 0.42);
+  height: calc((--size-1) * 0.42);
+  border-radius: 50%;
+}
+
+.sage-green.round-rec {
+  width: var(--size-2);
+  height: var(--size-1);
+  border-radius:calc( var(--size-1) / 2);
+  position: relative;
+}
+.sage-green.round-rec::before {
+  content: '';
+  background-color: white;
+  border-top-left-radius: var(--size-1);
+  border-bottom-left-radius: var(--size-1);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  width: calc(var(--size-1) * 0.93 / 2);
+  height: calc(var(--size-1) * 0.93);
+}
+
+.half-circle {
+  width: var(--size-1);
+  height: var(--size-2);
+  border-radius: var(--size-1) 0 0 var(--size-1);
 }

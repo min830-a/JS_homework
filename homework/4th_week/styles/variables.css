@@ -1,0 +1,20 @@
+:root{
+  /* 색상 */
+  --orange : #FF6000;
+  --red : #B31116;
+  --black : #1D1316;
+  --yellow : #FFD528;
+  --brown : #B84601;
+  --beige : #E9D4B4;
+  --sage-green : #DFE8E0;
+  --bg-color : #FFFFFF;
+
+
+  /* 도형 크기 */
+  --size-1 : 125px;
+  --size-2 : 250px; 
+
+  /* 타이포그래피 */
+  --base-font-family: ;
+  --font-size-base: 1rem; /* = 16px */
+ }
