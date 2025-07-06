@@ -45,7 +45,7 @@ gsap.from(".pos-1",{
   rotation:180,
   opacity:0,
   duration:1.2,
-  ease: "export.out",
+  ease: "expo.out",
   delay: 1.2,
 });
 
