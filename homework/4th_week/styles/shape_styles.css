@@ -6,11 +6,13 @@
 .yellow{background-color: var(--yellow);}
 .orange {background-color: var(--orange);}
 .beige { background-color: var(--beige);}
+.brown { background-color: var(--brown); }
 .sage-green { background-color: var(--sage-green);}
  
 /* 도형 */
 .shape {
-  display: block;
+  display: grid;
+  z-index: 1;
 }
 .point-circle {
   width: var(--size-1);
@@ -28,7 +30,7 @@
   border-radius: 50%;
 }
 
-
+/* 상단 모형 */
 .orange.point-circle {
   position: relative;
 }
@@ -74,10 +76,21 @@
   border-radius: inherit;
 }
 
+.orange.quarter-circle {
+  border-radius:100% 0 0 0;
+}
+
+/* 중간 모형 */
+.black.quarter-circle,
+.beige.quarter-circle,
+.brown.quarter-circle {
+  border-radius: 0 0 0 100%;
+}
+
 .line-half-circle {
   width: var(--size-2);
   height: var(--size-1);
-  border-radius: var(--size-1) var(--size-1) 0 0;
+  border-radius: 0 0 var(--size-1) var(--size-1);
   position: relative;
 }
 
@@ -86,22 +99,22 @@
   width: 50%;
   height: 50%;
   background-color: var(--bg-color);
-  border-radius: calc(var(--size-1) / 2) calc(var(--size-1) / 2) 0 0 ;
-  bottom: 0;
+  border-radius: 0 0 calc(var(--size-1) / 2) calc(var(--size-1) / 2);
+  top: 0;
   left: 50%;
   position: absolute;
   transform: translate(-50%);
 }
 
 .red.round-rec {
-  width: var(--size-2);
-  height: var(--size-1);
+  height: var(--size-2);
+  width: var(--size-1);
   border: 40px solid var(--red);
   border-radius: calc( var(--size-1) / 2);
-  box-sizing: border-box;
   background-color: transparent;
 }
 
+/* 하단 모형 */
 .line-circle {
   border: 2px solid var(--red);
   border-radius: 50%;
@@ -115,6 +128,7 @@
   width: calc((--size-1) * 0.42);
   height: calc((--size-1) * 0.42);
   border-radius: 50%;
+  
 }
 
 .sage-green.round-rec {
@@ -137,7 +151,7 @@
 }
 
 .half-circle {
-  width: var(--size-1);
-  height: var(--size-2);
+  width: calc(var(--size-1) / 2);
+  height: var(--size-1);
   border-radius: var(--size-1) 0 0 var(--size-1);
 }
